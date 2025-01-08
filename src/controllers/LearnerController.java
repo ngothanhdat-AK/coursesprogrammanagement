@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class LearnerController implements Manageable {
     private final DataManager<Learner> learnerManager;
     private final DataManager<Course> courseManager;
-
+    
     public LearnerController() {
         learnerManager = new DataManager<>("learners.dat");
         courseManager = new DataManager<>("courses.dat");
@@ -30,6 +30,7 @@ public class LearnerController implements Manageable {
             learnerManager.addItem(learner);
             View.display("Learner added successfully.");
         } else {
+            System.out.println("hello");
             View.display("Invalid Course ID. Learner not added.");
         }
     }
